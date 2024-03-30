@@ -8,7 +8,7 @@ test('Check about page', async ({ page }) => {
 });
 
 test('Check about page test', async ({ page }) => {
-  await page.goto('http://localhost:8090/about');
+  await page.goto('https://boboev-grades.onrender.com/about');
   const heading = await page.$('a');
   const text = await heading.textContent();
   expect(text).toBe('Home');
