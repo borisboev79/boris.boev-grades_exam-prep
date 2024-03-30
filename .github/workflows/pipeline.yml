@@ -31,3 +31,17 @@ jobs:
       run: npm run test:unit
     - name: Display Student's Softuni Username
       run: echo "boris.boev"
+
+  deploy:
+
+    needs: build-and-test
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to production
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.SERVICE_ID }}
+        api-key: ${{ secrets.RENDER_TOKEN }}
+  
