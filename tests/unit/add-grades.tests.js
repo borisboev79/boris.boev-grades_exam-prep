@@ -60,3 +60,4 @@ suite('Add Grades page', function() {
 		"Add invalid grade should not change the grades count");
   });
 });
+
